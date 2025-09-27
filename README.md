@@ -1,12 +1,34 @@
-  Problem Description
- We are asked to find the maximum scaling factor that can be used for a closed loop
- turbomachinery testing facility.
- For testing purposes, the test-section and the upstream diffuser are redesigned and fabri
-cated. The diffuser has an inlet at station 3 and an outlet at station 4, with the following
- given dimensions:
- • Pipe diameter: D = 0.6 m
- • Available diffuser length: L = 1.5 m
- The facility must operate within these constraints:
- • Maximum allowable pressure in any part of the facility: 250 kPa (structural re
-quirement).
- • p05 ≥ p01 to maintain constant inlet conditions and closed-loop flow
+# ME302: Compressor Operation Map Analysis
+
+Scaling analysis of a closed-loop turbomachinery test facility, ensuring Mach and Reynolds similarity under structural and operational constraints.
+
+---
+
+## 📌 Abstract
+This project determines the **maximum geometric scaling factor** that can be applied to a closed-loop turbomachinery test facility.  
+The facility must satisfy:
+- Structural constraint: **p < 250 kPa** throughout the loop  
+- Closed-loop flow condition: **p₀₅ ≥ p₀₁**  
+- Similarity conditions for Mach number (**M = 0.55**) and Reynolds number (**Re = 3.0×10⁶**)  
+
+Using compressor map data and Python-based analysis, the study computes the scale, pressures, and validates feasibility.
+
+---
+
+## ⚙️ Methodology
+1. Derived expressions for scaling factor **s** from Mach & Reynolds similarity.  
+2. Incorporated compressor map data into the formulation.  
+3. Developed a **Python script** to compute scaling factor and stagnation pressures.  
+4. Checked results against **structural and operational constraints**.  
+
+---
+
+## ✅ Key Results
+- **Maximum Scaling Factor (s):** 0.618  
+- **Inlet Stagnation Pressure (p₀₁):** 204.7 kPa  
+- **Compressor Exit Pressure (p₀₂):** 247.8 kPa  
+- All computed pressures < 250 kPa ✅  
+- Closed-loop feasibility satisfied: **p₀₅ ≥ p₀₁**
+
+
+
